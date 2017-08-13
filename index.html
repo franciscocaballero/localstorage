@@ -32,6 +32,12 @@
 
   function addItem(e){
     e.preventDefault(); // Stops Form from reloading
+    const text = (this.querySelector('[name=item]')).value;
+    const item = {
+      text: text,
+      done: false
+    }
+  this.reset();/// form element that 'resets form'
   }
 
   addItems.addEventListener('submit', addItem);
